@@ -1,21 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package trabajomenu1;
 
-/**
- *
- * @author Usuario
- */
+import javax.swing.JOptionPane;
+
 public class TrabajoMenu1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Operaciones obj = new Operaciones ();
+        int w=1;
+
+        while(w==1){
+
+           int opcion = Integer.parseInt(JOptionPane.showInputDialog("SELECCIONE UNA OPCION\n"+
+                                                                     "1. CALCULADORA\n"+
+                                                                     "2. TABLA DE MULTIPLICAR\n"+
+                                                                     "3. CARGAR Y MOSTRAR UN VECTOR\n"+
+                                                                     "4. SALIR\n"));
+
+           switch(opcion){
+               case 1:
+                   break;
+                   
+               case 2:
+                   obj.tablaMultiplicar();
+                   break;
+
+               case 3:
+                   obj.vector();
+                   break;
+
+               case 4:
+                   w=0;
+                   JOptionPane.showMessageDialog(null, "SALIENDO");
+                   break;
+
+               default:
+                   JOptionPane.showMessageDialog(null, "DIGITE UNA OPCION VALIDA");
+        }
+        }
     }
-    
+
 }
